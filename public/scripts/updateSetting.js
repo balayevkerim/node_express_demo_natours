@@ -5,9 +5,9 @@ export const updateSetting = async (data, type) => {
   let url;
   try {
     if (type == 'password') {
-      url = 'http://localhost:3000/api/users/updatePassword';
+      url = '/api/users/updatePassword';
     } else {
-      url = 'http://localhost:3000/api/users/updateUser';
+      url = '/api/users/updateUser';
     }
     const result = await axios({
       method: 'PATCH',

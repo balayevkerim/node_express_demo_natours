@@ -71,7 +71,7 @@ if (logoutBtn) {
     try {
       const result = await axios({
         method: 'GET',
-        url: 'http://localhost:3000/api/users/logout',
+        url: '/api/users/logout',
       });
 
       console.log(result);

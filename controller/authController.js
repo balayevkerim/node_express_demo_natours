@@ -1,7 +1,7 @@
 const catchAsync = require('../utils/catchAsync');
 const User = require('../models/userModel');
 const jwt = require('jsonwebtoken');
-const bcrypt = require('bcrypt');
+// const bcrypt = require('bcrypt');
 const ErrorHandler = require('../utils/errorHandler');
 const { promisify } = require('util');
 const Email = require('../utils/email');
@@ -59,7 +59,7 @@ const logIn = async (req, res, next) => {
     if (!user) {
       return next(new ErrorHandler('Invalid email or password', 400));
     }
-    const userPwd = await bcrypt.compare(password, user.password);
+    // const userPwd = await bcrypt.compare(password, user.password);
 
     if (!userPwd) {
       return next(new ErrorHandler('Invalid email or password,ups', 400));
@@ -274,7 +274,7 @@ const updatePassword = catchAsync(async (req, res, next) => {
   const user = await User.findById(req.user._id);
 
   //2 check if posted curretn pwd is correct
-  const userPwd = await bcrypt.compare(req.body.currentPassword, user.password);
+  // const userPwd = await bcrypt.compare(req.body.currentPassword, user.password);
   if (!userPwd) {
     return next(new ErrorHandler('Current password is not correct', 400));
   }

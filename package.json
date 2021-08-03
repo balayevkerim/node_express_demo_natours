@@ -2,7 +2,7 @@
   "name": "node-express-demo",
   "version": "1.0.0",
   "description": "full stack is loading",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "start:prod": "NODE_ENV=production nodemon server.js",

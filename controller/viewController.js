@@ -5,11 +5,13 @@ const tourCtrl = require('./tourController');
 const catchAsync = require('../utils/catchAsync');
 const ErrorHandler = require('../utils/errorHandler');
 const loadOverview = catchAsync(async (req, res) => {
-  const tours = await Tour.find();
+  /* const tours = await Tour.find();
   res.status(200).render('overview', {
     tours,
     title: 'Exciting tours for adventurous people',
-  });
+  }); */
+
+  res.send('Hello world');
 });
 
 const loadTourPage = catchAsync(async (req, res, next) => {

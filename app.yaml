@@ -1,0 +1,7 @@
+runtime:nodejs14
+env_variables:
+  DATABASE: "mongodb+srv://kerim:<password>@cluster0.7dblu.mongodb.net/natours?retryWrites=true&w=majority"
+  DB_PWD: "PKh6hzArpwBCXHfA"
+  RESET_TOKEN_SECRET: "5dj!Hlfj36@lH"
+  EMAIL_FROM: "natours@gmail.com"
+  STRIPE_SECRET_KEY: "sk_test_51IiPUdJcc1mpeWP4Az69GQJNDKDQeDHhtduGV8jjuQwYEvoprbuGQFaBAbgHVUCWlMXgmVISWvQ13cxHRJycywv300nzK3qHTD"

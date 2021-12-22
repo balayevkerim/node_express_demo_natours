@@ -3,7 +3,6 @@ const path = require('path');
 const express = require('express');
 const app = express();
 const cookieParser = require('cookie-parser');
-const morgan = require('morgan');
 const tourRoutes = require('./route/tourRoutes');
 const userRoutes = require('./route/userRoutes');
 const reviewRoutes = require('./route/reviewRoutes');
@@ -29,9 +28,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/api', limit);
 //middlewarres
-if (process.env.NODE_ENV === 'development') {
+/* if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'));
-}
+} */
 app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));

@@ -1,3 +1,4 @@
+import 'regenerator-runtime/runtime'
 import { login } from './login';
 import '@babel/polyfill';
 import { displayMap } from './mapbox';

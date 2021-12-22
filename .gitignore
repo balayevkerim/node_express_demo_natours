@@ -1,3 +1,4 @@
 config.env
+app.yaml
 .cache
 node_modules
